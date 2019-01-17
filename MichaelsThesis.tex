@@ -232,7 +232,7 @@
 % Bachelors students in the Schreyer Honors College & Engineering Science.
 %\documentclass[bs,schreyer,esc,twoha,12pt]{psuthesis}
 % Bachelors students in Engineering Science.
-\documentclass[bs,esc,12pt]{psuthesis}
+\documentclass[bs,schreyer,12pt]{psuthesis}
 
 \usepackage[T1]{fontenc}
 %\usepackage{lmodern}
@@ -248,6 +248,7 @@
 %\usepackage{exscale}
 %\usepackage[mathscr]{eucal}
 %\usepackage{bm}
+\usepackage{xspace}
 \usepackage{subfigure}
 \usepackage{eqlist} % Makes for a nice list of symbols.
 \usepackage[nosepfour,warning,np,debug,autolanguage]{numprint}
@@ -260,7 +261,7 @@
 \usepackage{url}
 
 % http://www.tex.ac.uk/cgi-bin/texfaq2html?label=citesort
-\usepackage{cite}
+\usepackage[sorting,compression]{cite}
 
 \usepackage{titlesec}
 
@@ -295,7 +296,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{SupplementaryMaterial/UserDefinedCommands}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Renewed Float Parameters              %
 % (Makes floats fit better on the page) %
@@ -314,19 +314,19 @@
 \title{Dynamics of Fish}
 
 % Author and Department
-\author{Your Name}
-\dept{Your Department Name}
+\author{Michael Mazza}
+\dept{Mechanical Engineering}
 % the degree will be conferred on this date
-\degreedate{May 2013}
+\degreedate{May 2019}
 % year of your copyright
-\copyrightyear{2013}
+\copyrightyear{2019}
 
 % This command is used for students submitting a thesis to the
 % Schreyer Honors College and for students in Engineering Science.
 % The argument of this command should contain every after the word
 % ``requirements'' that appears on the title page. This provides the
 % needed flexibility for all the degree types.
-\bachelorsdegreeinfo{for a baccalaureate degree \\ in Engineering Science \\ with honors in Engineering Science}
+\bachelorsdegreeinfo{for a baccalaureate degree \\ in Mechanical Engineering \\ with honors in Mechanical Engineering}
 
 % This is the document type. For example, this could also be:
 %	Comprehensive Document
@@ -352,14 +352,14 @@
 % and up to 6 readers.
 %
 % Begin by specifying the number of readers.
-\numberofreaders{4}
+\numberofreaders{3}
 
 % For baccalaureate honors degrees, enter the name of your
 % honors advisor below.
-\honorsadvisor{Honors P. Advisor}
-{Associate Professor of Engineering Science and Mechanics}
-\honorsadvisortwo{Honors P. Advisor, Jr.}
-{Professor of Engineering Science and Mechanics}
+\honorsadvisor{Stephanie Stockar}
+{Assistant Professor of Mechanical Engineering}
+%\honorsadvisortwo{Honors P. Advisor, Jr.}
+%{Professor of Engineering Science and Mechanics}
 
 % For baccalaureate honors degrees, if you have a second
 % Thesis Supervisor, enter his or her name below.
@@ -377,8 +377,8 @@ of Engineering Science and Mechanics
 % Input reader information below. The optional argument, which
 % comes first, goes on the second line before the name.
 \advisor[Thesis Advisor, Chair of Committee]
-		{Joseph H. Blow}
-		{Professor of SomeThing}
+		{Francesco Costanzo}
+		{Professor of Engineering Science and Mechanics}
 
 \readerone[Optional Title Here]
 			{Reader Name}
@@ -413,16 +413,16 @@ of Engineering Science and Mechanics
 % Makes use of LaTeX's include facility. Add as many chapters
 % and appendices as you like.
 \includeonly{%
-Chapter-1/Chapter-1,%
-Chapter-2/Chapter-2,%
-Chapter-3/Chapter-3,%
-Chapter-4/Chapter-4,%
-Chapter-5/Chapter-5,%
-Appendix-A/Appendix-A,%
-Appendix-B/Appendix-B,%
-Appendix-C/Appendix-C,%
-Appendix-D/Appendix-D,%
-Appendix-E/Appendix-E%
+Chapter-1/Chapter-1,
+Chapter-2/Chapter-2,
+Chapter-3/Chapter-3,
+%Chapter-4/Chapter-4,%
+%Chapter-5/Chapter-5,%
+%Appendix-A/Appendix-A,%
+%Appendix-B/Appendix-B,%
+%Appendix-C/Appendix-C,%
+%Appendix-D/Appendix-D,%
+%Appendix-E/Appendix-E%
 }
 
 \usepackage{listings}
@@ -516,8 +516,8 @@ Appendix-E/Appendix-E%
 %%%%%%%%%%%%%%%%%%%%%%
 % Chapters
 \include{Chapter-1/Chapter-1}
-%\include{Chapter-2/Chapter-2}
-%\include{Chapter-3/Chapter-3}
+\include{Chapter-2/Chapter-2}
+\include{Chapter-3/Chapter-3}
 %\include{Chapter-4/Chapter-4}
 %\include{Chapter-5/Chapter-5}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -578,7 +578,7 @@ Appendix-E/Appendix-E%
 \backmatter
 
 % Vita
-\vita{SupplementaryMaterial/Vita}
+%\vita{SupplementaryMaterial/Vita}
 
 \end{document}
 

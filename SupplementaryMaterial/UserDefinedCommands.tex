@@ -26,8 +26,32 @@
 
 \makeatother
 
-% command for vectors
-\newcommand{\bv}[1]{\ensuremath{\vec{#1}}}
+% Commands for Mathematics
+\newcommand{\scdot}{\ensuremath{\!\cdot\!}}
+\newcommand{\Grad}[2][nonsense]{%
+\ifthenelse{\equal{#1}{nonsense}}%
+{\nabla#2}%
+{\nabla_{#1}#2}%
+}
+\newcommand{\Div}[2][nonsense]{%
+\ifthenelse{\equal{#1}{nonsense}}%
+{\nabla\scdot#2}%
+{\nabla_{#1}\scdot#2}%
+}
+\DeclareMathOperator{\trace}{tr}
+\DeclareMathOperator{\skw}{skw}
+\DeclareMathOperator{\sym}{sym}
+\DeclareMathOperator{\Lin}{Lin}
+\DeclareMathOperator{\real}{\Re}
+\DeclareMathOperator{\imag}{\Im}
+\DeclareMathOperator{\mmod}{mod}
+\renewcommand{\d}[1]{\ensuremath{\mathrm{d}#1}}
+\newcommand{\bv}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\tensor}[1]{\mathsf{#1}}
+\newcommand{\transpose}[1]{#1^{\scriptscriptstyle\mathrm{T}}}
+\newcommand{\inversetranspose}[1]{\ensuremath{#1^{\scriptscriptstyle-\mathrm{T}}}}
+\newcommand{\colondot}{\mathbin{:}}
+
 % command for unit vectors
 \newcommand{\uv}[2][blank]{%
 \ifthenelse{\equal{#1}{blank}}%
@@ -45,3 +69,20 @@
 \newcommand{\ui}{\ensuremath{\hat{\imath}}}
 \newcommand{\uj}{\ensuremath{\hat{\jmath}}}
 \newcommand{\uk}{\ensuremath{\hat{k}}}
+
+% Special symbols
+\newcommand{\comsol}{COMSOL Multiphysics\textsuperscript{\tiny\textregistered}\xspace}
+
+% Definition of the acronyms
+\DeclareAcronym{FEM}{
+    short           = FEM,
+    short-plural    = FEMs,
+    long            = Finite Element Method,
+    long-plural     = Finite Element Methods
+}
+\DeclareAcronym{VMM}{
+    short           = VMM,
+    short-plural    = VMMs,
+    long            = Virtual Multiscale Method,
+    long-plural     = Virtual Multiscale Methods
+}
